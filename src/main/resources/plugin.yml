@@ -1,0 +1,6 @@
+name: SR-PlayerRider
+version: version-number-unknown
+description: PlayerRiding Plugin.
+authors: [SiriuseR]
+website: http://www.siriuser.net/
+main: net.siriuser.playerrider.PlayerRider
