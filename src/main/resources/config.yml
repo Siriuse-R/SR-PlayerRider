@@ -1,0 +1,15 @@
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#   PlayerRider ConfigFile!
+#   Author SiriuseR(dejiplus)
+#   License GPLv3
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+#>>>>>>>>>>>>>>>>>>#
+#   Debug Config   #
+#<<<<<<<<<<<<<<<<<<#
+Debug: false
+
+#>>>>>>>>>>>>>>>>>>#
+#   DO NOT TOUCH   #
+#<<<<<<<<<<<<<<<<<<#
+ConfigVersion: 1

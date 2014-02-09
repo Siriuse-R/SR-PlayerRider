@@ -21,9 +21,14 @@ import java.io.IOException;
 public class PlayerRider extends JavaPlugin {
     private static PlayerRider instance;
 
+    private Helper worker;
+
     @Override
     public void onEnable() {
         LogUtil.init(this);
+
+        worker = Helper.getInstance();
+        worker.setMainPlugin(this);
 
         PluginManager pm = getServer().getPluginManager();
 
@@ -36,6 +41,9 @@ public class PlayerRider extends JavaPlugin {
     @Override
     public void onDisable() {
         getServer().getScheduler().cancelTasks(this);
+
+        worker.disableAll();
+        Helper.dispose();
 
         PluginDescriptionFile pdfFile = this.getDescription();
         LogUtil.info(pdfFile.getName() + " version " + pdfFile.getVersion() + " is disabled!");
