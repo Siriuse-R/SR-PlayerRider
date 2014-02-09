@@ -7,9 +7,12 @@ package net.siriuser.playerrider;
 
 import net.syamn.utils.LogUtil;
 
+import net.syamn.utils.Metrics;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.IOException;
 
 /**
  * @author SiriuseR
@@ -26,6 +29,8 @@ public class PlayerRider extends JavaPlugin {
 
         PluginDescriptionFile pdfFile = this.getDescription();
         LogUtil.info(pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");
+
+        setupMetrics();
     }
 
     @Override
@@ -34,6 +39,16 @@ public class PlayerRider extends JavaPlugin {
 
         PluginDescriptionFile pdfFile = this.getDescription();
         LogUtil.info(pdfFile.getName() + " version " + pdfFile.getVersion() + " is disabled!");
+    }
+
+    private void setupMetrics() {
+        try {
+            Metrics metrics = new Metrics(this);
+            metrics.start();
+        } catch (IOException ex) {
+            LogUtil.warning("[PlayerRider] cant send metrics data!");
+            ex.printStackTrace();
+        }
     }
 
     /**
