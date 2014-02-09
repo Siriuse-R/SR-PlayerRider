@@ -5,6 +5,7 @@
  */
 package net.siriuser.playerrider;
 
+import net.siriuser.playerrider.listeners.PlayerListener;
 import net.syamn.utils.LogUtil;
 
 import net.syamn.utils.Metrics;
@@ -31,6 +32,7 @@ public class PlayerRider extends JavaPlugin {
         worker.setMainPlugin(this);
 
         PluginManager pm = getServer().getPluginManager();
+        pm.registerEvents(new PlayerListener(this), this);
 
         PluginDescriptionFile pdfFile = this.getDescription();
         LogUtil.info(pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");

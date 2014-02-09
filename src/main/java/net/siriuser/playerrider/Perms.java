@@ -3,6 +3,8 @@ package net.siriuser.playerrider;
 import org.bukkit.permissions.Permissible;
 
 public enum Perms {
+    RIDE ("ride"),
+
     DEBUG ("debug"),
     ;
 
