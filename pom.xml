@@ -6,7 +6,7 @@
     <artifactId>playerrider</artifactId>
     <name>SR-PlayerRider</name>
     <description>Minecraft Bukkit Plugin.</description>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <url>http://www.siriuser.net/</url>
 
     <!-- Properties
